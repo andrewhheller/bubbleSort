@@ -1,0 +1,31 @@
+const expect = require('chai').expect;
+const bubbleSort = require(../bubblesort);
+const sinon = require('sinon');
+
+
+*** if you see a dot it means you wrote it ***
+
+describe('bubbleSort', () => {
+
+  it('exists', () => {
+    expect(bubbleSort).to.be.ok;
+  });
+
+  it('sorts', () => {
+    expect(bubbleSort([2, 1])).to.eql([1, 2]);
+  });
+
+  it('sorts', () => {
+    expect(bubbleSort([0, 2, 1])).to.eql([0, 1, 2]);
+  });
+
+  it('sort efficiently', () => {
+    const fn = sinon.spy();
+    bubbleSort([0, 1, 2, 3, 4], fn);
+    expect(spy.callCount).to.equal(4));
+  });
+
+  
+
+
+});
